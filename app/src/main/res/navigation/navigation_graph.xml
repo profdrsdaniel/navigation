@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:id="@+id/navigation_graph"
+    app:startDestination="@id/menu_item_profile">
+
+    <fragment
+        android:id="@+id/menu_item_home"
+        android:name="com.example.myapplication.BlankFragment"
+        android:label="BlankFragment" />
+    <fragment
+        android:id="@+id/menu_item_profile"
+        android:name="com.example.myapplication.Two"
+        android:label="Two" >
+        <action
+            android:id="@+id/action_two_to_teste"
+            app:destination="@id/teste" />
+    </fragment>
+    <fragment
+        android:id="@+id/teste"
+        android:name="com.example.myapplication.Teste"
+        android:label="Teste" >
+        <action
+            android:id="@+id/action_teste_to_two2"
+            app:destination="@id/menu_item_profile" />
+    </fragment>
+</navigation>
